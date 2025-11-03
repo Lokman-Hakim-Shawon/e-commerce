@@ -1,22 +1,38 @@
 'use client'
+import axios from 'axios';
 import React from 'react';
 
 const Add_product = () => {
-    const handleSubmit=(e)=>{
-        e.preventDefault()
+    const handleSubmit=async(e)=>{
+        e.preventDefault();
         const formData=new FormData(e.target)
-        const name=formData.get('name')
-        const desc=formData.get('description')
-        const price=formData.get('price')
-        const cetegory=formData.get('cetegory')
-        const image=formData.get('image')
-        console.log(name,desc,price,cetegory,image)
-    }
+        const Name=formData.get('name');
+        const Description=formData.get('description')
+        const Price=formData.get('price')
+        const Category=formData.get('category')
+        const imageFile=formData.get('image')
+ 
+       const data=new FormData()
+       data.append('image',imageFile)
+       axios.post('https://api.imgbb.com/1/upload?key=9680b301d85d640ef2127f120a152180',data)
+       .then(res=>{
+         const Image=res.data.data.url
+         const DATA = {Name,Description,Price,Category,Image}
+         console.log(DATA)
+         axios.post('https://e-commerce-backend-wheat-zeta.vercel.app/api/product',DATA)
+         .then(res=>{
+            alert('data is posted successful')
+            console.log(res.data)
+         })
+         .catch(err=>console.log(err))
+       })
+       .catch(err=>console.log(err))
+     }
     return (
-        <div className='flex justify-center items-center w-full h-full'>
-            <div className='border border-black p-4 w-full'>
+        <div className='w-full h-[100vh]'>
+            <div className='border border-black p-4 w-full h-[100vh]'>
                 <h1 className="text-3xl font-semibold text-center pb-9">Add a New Product</h1>
-                <form onSubmit={handleSubmit} className="space-y-4 grid grid-cols-3 gap-x-8 items-center w-full h-full " action="" method="">
+                <form onSubmit={handleSubmit} className="space-y-4 py-5 grid grid-cols-3 gap-x-8 items-center w-full h-[80vh] " action="" method="">
 
                     {/* product name  */}
                     <div className=" space-y-2 ">
@@ -40,7 +56,7 @@ const Add_product = () => {
                     <div className=" space-y-2 ">
                     <p className="">Product Price</p>
                     <input
-                        type="number" id="id" name="price" placeholder="Type Product Price"
+                        type="text" id="id" name="price" placeholder="Type Product Price"
                         className="w-[300px] border border-slate-200 rounded-lg py-3 px-5 outline-none	bg-transparent"
                     />
                     </div>
@@ -62,7 +78,7 @@ const Add_product = () => {
                     />
                     </div>
                     <button className="col-span-3 inline-flex items-center justify-center px-8 py-4 font-sans font-semibold tracking-wide text-white bg-blue-500 rounded-lg h-[60px]">
-                        Upload
+                         Upload Project
                     </button>
                 </form>
             </div>

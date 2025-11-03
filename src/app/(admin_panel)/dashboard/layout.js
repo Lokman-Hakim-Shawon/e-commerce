@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         <div className="w-[20vw]">
         <Admin_Navbar/>
         </div>
-        <div className="w-[80vw] border">
+        <div className="w-[80vw] border h-full">
         {children}
         </div>
         </div>
