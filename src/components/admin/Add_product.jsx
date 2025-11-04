@@ -29,10 +29,10 @@ const Add_product = () => {
        .catch(err=>console.log(err))
      }
     return (
-        <div className='w-full h-[100vh]'>
-            <div className='border border-black p-4 w-full h-[100vh]'>
-                <h1 className="text-3xl font-semibold text-center pb-9">Add a New Product</h1>
-                <form onSubmit={handleSubmit} className="space-y-4 py-5 grid grid-cols-3 gap-x-8 items-center w-full h-[80vh] " action="" method="">
+        <div className='w-full lg:h-[100vh]'>
+            <div className='border border-black p-4 w-full lg:h-[100vh]'>
+                <h1 className="text-3xl font-semibold text-center lg:pb-9">Add a New Product</h1>
+                <form onSubmit={handleSubmit} className="space-y-4 py-5 grid grid-cols-1 lg:grid-cols-3 lg:gap-x-8 items-center w-full lg:h-[80vh] " action="" method="">
 
                     {/* product name  */}
                     <div className=" space-y-2 ">
@@ -77,7 +77,7 @@ const Add_product = () => {
                         className="w-[300px] border border-slate-200 rounded-lg py-3 px-5 outline-none	bg-transparent"
                     />
                     </div>
-                    <button className="col-span-3 inline-flex items-center justify-center px-8 py-4 font-sans font-semibold tracking-wide text-white bg-blue-500 rounded-lg h-[60px]">
+                    <button className="lg:col-span-3 inline-flex items-center justify-center px-8 py-4 font-sans font-semibold tracking-wide text-white bg-blue-500 rounded-lg h-[60px]">
                          Upload Project
                     </button>
                 </form>

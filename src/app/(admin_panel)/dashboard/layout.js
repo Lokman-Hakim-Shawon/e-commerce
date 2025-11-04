@@ -2,6 +2,7 @@ import Admin_Navbar from "@/components/admin/Admin_Navbar";
 import { Geist, Geist_Mono } from "next/font/google";
 // import Admin_Navbar from "@/components/admin/Admin_Navbar";
 import '../../globals.css'
+import QueryProvider from "@/app/provider/QueryProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,12 +24,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex gap-x-4">
-        <div className="w-[20vw]">
+        <div className="lg:flex lg:gap-x-4">
+        <div className="lg:w-[20vw]">
         <Admin_Navbar/>
         </div>
-        <div className="w-[80vw] border h-full">
-        {children}
+        <div className="w-full lg:w-[80vw] border h-full">
+        <QueryProvider>{children}</QueryProvider>
         </div>
         </div>
       </body>

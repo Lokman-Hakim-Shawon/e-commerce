@@ -10,11 +10,11 @@ const Admin_Navbar = () => {
         {name:'Home',address:'/'},
     ]
     return (
-        <div className='border border-black h-[100vh]'>
+        <div className='hidden lg:block border border-black h-[100vh] '>
             <h1 className="border-b border-black text-center py-4 font-semibold ">Admin panel</h1>
             <ul className="">
                 {
-                    link.map((data,index)=><Link href={data.address} key={index}><li  className=" border-b border-black py-4 px-8 hover:bg-slate-100">{data.name}</li></Link>)
+                    link.map((data,index)=><Link href={data.address} key={index}><li  className=" border-b border-black py-4 lg:px-8 hover:bg-slate-100">{data.name}</li></Link>)
                 }
             </ul>
         </div>

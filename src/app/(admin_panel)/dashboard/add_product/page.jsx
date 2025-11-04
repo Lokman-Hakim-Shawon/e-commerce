@@ -4,7 +4,7 @@ import React from 'react';
 
 const page = () => {
     return (
-        <div className=' h-[90vh] w-full '>
+        <div className=' lg:h-[90vh] w-full '>
             <Add_product />
         </div>
     );
