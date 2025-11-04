@@ -1,8 +1,35 @@
 'use client'
 import axios from 'axios';
 import React from 'react';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 const Add_product = () => {
+    const queryClient = useQueryClient()
+     const addProductMutetion=useMutation({
+        mutationFn:async(formData)=>{
+            const imageUpload=await axios.post('https://api.imgbb.com/1/upload?key=9680b301d85d640ef2127f120a152180',formData.imageData)
+             const Image=imageUpload.data.data.url
+             const ProductData={
+                Name:formData.Name,
+                Description:formData.Description,
+                Price:formData.Price,
+                Category:formData.Category,
+                Image:Image
+             }
+             const res=await axios.post('https://e-commerce-backend-wheat-zeta.vercel.app/api/product',ProductData)
+             return res.data
+            },
+
+            onSuccess:(data)=>{
+                alert('product added Successful')
+                queryClient.invalidateQueries(["product"])
+            },
+            onError:(error)=>{
+                alert(error.message)
+            }
+
+     })
+
     const handleSubmit=async(e)=>{
         e.preventDefault();
         const formData=new FormData(e.target)
@@ -12,21 +39,23 @@ const Add_product = () => {
         const Category=formData.get('category')
         const imageFile=formData.get('image')
  
-       const data=new FormData()
-       data.append('image',imageFile)
-       axios.post('https://api.imgbb.com/1/upload?key=9680b301d85d640ef2127f120a152180',data)
-       .then(res=>{
-         const Image=res.data.data.url
-         const DATA = {Name,Description,Price,Category,Image}
-         console.log(DATA)
-         axios.post('https://e-commerce-backend-wheat-zeta.vercel.app/api/product',DATA)
-         .then(res=>{
-            alert('data is posted successful')
-            console.log(res.data)
-         })
-         .catch(err=>console.log(err))
-       })
-       .catch(err=>console.log(err))
+       const imageData=new FormData()
+       imageData.append('image',imageFile)
+       addProductMutetion.mutate({Name,Description,Price,Category,imageData})
+
+    //    axios.post('https://api.imgbb.com/1/upload?key=9680b301d85d640ef2127f120a152180',data)
+    //    .then(res=>{
+    //      const Image=res.data.data.url
+    //      const DATA = {Name,Description,Price,Category,Image}
+    //      console.log(DATA)
+    //      axios.post('https://e-commerce-backend-wheat-zeta.vercel.app/api/product',DATA)
+    //      .then(res=>{
+    //         alert('data is posted successful')
+    //         console.log(res.data)
+    //      })
+    //      .catch(err=>console.log(err))
+    //    })
+    //    .catch(err=>console.log(err))
      }
     return (
         <div className='w-full lg:h-[100vh]'>
