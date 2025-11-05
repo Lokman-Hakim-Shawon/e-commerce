@@ -14,9 +14,9 @@ const HomeSideBar = () => {
     return (
         <div className='max-w-[100%]'>
             {
-                sideText.map((data,index)=><div key={index} className='flex justify-between items-center w-full space-x-32 hover:text-primary hover:cursor-pointer'>
+                sideText.map((data,index)=><div key={index} className='flex justify-between items-center w-full space-x-1 space-y-3 px-2 hover:text-primary hover:cursor-pointer'>
                 <p className='w-full'>{data.name}</p>
-                <IoIosArrowForward  className='text-3xl'/>
+                <IoIosArrowForward  className='text-xl'/>
            </div>)
             }
         </div>
