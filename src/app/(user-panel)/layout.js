@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/user/Navbar";
+// import Filter from "@/components/user/HomePage/Filter";
 
 
 const geistSans = Geist({
@@ -26,7 +27,10 @@ export default function RootLayout({ children }) {
       >
         <div className="gap-x-4">
         <Navbar/>
+        <div className="flex lg:mx-24 ">
+          {/* <Filter/> */}
         {children}
+        </div>
         </div>
       </body>
     </html>

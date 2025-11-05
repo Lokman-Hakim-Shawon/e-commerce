@@ -1,8 +1,13 @@
 "use client"
+import BannerSection from '@/components/user/HomePage/BannerSection';
+import HomeSideBar from './../../components/user/HomePage/HomeSideBar';
 export default function Home() {
   return (
-    <main className="">
-      <h1 className="text-3xl font-bold text-green-500">Lokman Hakim Shawon</h1>
+    <main className="w-full h-full">
+      <div className='flex justify-between  border'>
+        <HomeSideBar className='w-[20%]'/>
+        <BannerSection className='w-[80%]'/>
+      </div>
     </main>
   );
 }

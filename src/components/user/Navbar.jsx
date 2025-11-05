@@ -34,6 +34,8 @@ const Navbar = () => {
                </div>
             </div>
         </div>
+        
+        {/* Search box for mobile version */}
             <div className="lg:hidden bg-primary px-8 pb-4">
                 <input
                     type="text"
