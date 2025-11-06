@@ -9,7 +9,7 @@ const Navbar = () => {
             <div className=""><img src="/images/ads1.gif" alt="" className='mx-auto'/></div>
 
             {/* menu and logo section  */}
-            <div className='flex justify-between items-center px-8 py-2 gl:py-4 bg-primary text-white'>
+            <div className='flex justify-between items-center px-8 lg:px-16 py-2 lg:py-4 bg-primary text-white'>
             <MdMenu  className='text-4xl font-bold'/>
             <h1 className=" font-bold text-xl lg:text-4xl">Pickaboo</h1>
             <div>

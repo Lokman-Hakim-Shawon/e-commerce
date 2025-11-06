@@ -4,25 +4,25 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const BannerSection = () => {
     return (
-        <div className='w-[80%] border border-black'>
+        <div className='w-[100%] lg:w-[80%] border border-black h-[45vh]'>
             <Carousel autoPlay={true} showThumbs={false} infiniteLoop={true}>
                 <div>
-                    <img src="/images/banner1.jpg" />
+                    <img src="/images/banner1.jpg" className='h-[50vh] lg:h-[60vh]'/>
                 </div>
                 <div>
-                    <img src="/images/banner2.jpg" />
+                    <img src="/images/banner2.jpg" className='h-[50vh] lg:h-[60vh]'/>
                 </div>
                 <div>
-                    <img src="/images/banner3.jpg" />
+                    <img src="/images/banner3.jpg" className='h-[50vh] lg:h-[60vh]'/>
                 </div>
                 <div>
-                    <img src="/images/banner4.jpg" />
+                    <img src="/images/banner4.jpg" className='h-[50vh] lg:h-[60vh]'/>
                 </div>
                 <div>
-                    <img src="/images/banner5.jpg" />
+                    <img src="/images/banner5.jpg" className='h-[50vh] lg:h-[60vh]'/>
                 </div>
                 <div>
-                    <img src="/images/banner6.jpg" />
+                    <img src="/images/banner6.jpg" className='h-[50vh] lg:h-[60vh]'/>
                 </div>
             </Carousel>
         </div>

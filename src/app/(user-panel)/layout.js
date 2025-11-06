@@ -23,11 +23,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f0f0f0]`}
       >
         <div className="gap-x-4">
         <Navbar/>
-        <div className="flex lg:mx-24 ">
+        <div className="flex ">
           {/* <Filter/> */}
         {children}
         </div>
