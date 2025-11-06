@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f0f0f0]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f0f0f0] text-black`}
       >
         <div className="gap-x-4">
         <Navbar/>
