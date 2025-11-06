@@ -7,10 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-          primary:'#1299e8'
+          primary:'#1299e8',
+          secondary:'#002f67'
       }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
 
