@@ -1,6 +1,7 @@
 "use client"
 import BannerSection from '@/components/user/HomePage/BannerSection';
 import HomeSideBar from './../../components/user/HomePage/HomeSideBar';
+import AdsSlider from '@/components/user/HomePage/AdsSlider';
 export default function Home() {
   return (
     <main className="w-full h-full ">
@@ -8,6 +9,7 @@ export default function Home() {
         <HomeSideBar className='lg:w-[20%]'/>
         <BannerSection className='w-[100vw] lg:w-[80%]'/>
       </div>
+      <AdsSlider/>
     </main>
   );
 }
