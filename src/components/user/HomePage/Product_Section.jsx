@@ -1,4 +1,5 @@
 import Card from '@/components/shared/Card';
+import Link from 'next/link';
 import React from 'react';
 
 const Product_Section = ({heading,data}) => {
@@ -12,7 +13,7 @@ const Product_Section = ({heading,data}) => {
             </div>
             <div className=" grid grid-cols-2 lg:grid-cols-5 gap-x-1 lg:gap-x-4 gap-y-2">
                 {
-                    data.map((card,index)=><Card key={index} img={card.img} title={card.title} desc={card.desc} price={card.price}/>)
+                    data.map((card,index)=><Link key={index} href={`/${card.id}`}><Card id={card.id} img={card.img} title={card.title} desc={card.desc} price={card.price}/></Link>)
                 }
             </div>
         </div>

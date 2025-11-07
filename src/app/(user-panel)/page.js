@@ -12,11 +12,11 @@ export default function Home() {
   const heading5='SmartPhone Hub'
   const heading6='Best AC Deals'
   const cardData=[
-    {img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
-    {img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
-    {img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
-    {img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
-    {img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
+    {id:'1', img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
+    {id:'2', img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
+    {id:'3', img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
+    {id:'4', img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
+    {id:'5', img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
   ]
   return (
     <main className="w-full h-full ">

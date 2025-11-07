@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({img,title,desc,price}) => {
+const Card = ({id,img,title,desc,price}) => {
     
     return (
         <div>
