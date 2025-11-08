@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/user/Navbar";
+import Footer from "@/components/shared/Footer";
 // import Filter from "@/components/user/HomePage/Filter";
 
 
@@ -26,11 +27,12 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f0f0f0] text-black`}
       >
         <div className="gap-x-4">
-        <Navbar/>
-        <div className="flex ">
-          {/* <Filter/> */}
-        {children}
-        </div>
+             <Navbar/>
+           <div className="flex ">
+             {/* <Filter/> */}
+             {children}
+           </div>
+           <Footer/>
         </div>
       </body>
     </html>

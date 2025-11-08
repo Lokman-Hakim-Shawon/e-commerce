@@ -3,7 +3,7 @@ import BannerSection from '@/components/user/HomePage/BannerSection';
 import HomeSideBar from './../../components/user/HomePage/HomeSideBar';
 import AdsSlider from '@/components/user/HomePage/AdsSlider';
 import Product_Section from '@/components/user/HomePage/Product_Section';
-import Footer from '@/components/shared/Footer';
+
 export default function Home() {
   const heading1='Best Deals of Electronics'
   const heading2='Mobile'
@@ -31,7 +31,6 @@ export default function Home() {
       <Product_Section heading={heading4} data={cardData}/>
       <Product_Section heading={heading5} data={cardData}/>
       <Product_Section heading={heading6} data={cardData}/>
-      <Footer/>
     </main>
   );
 }
