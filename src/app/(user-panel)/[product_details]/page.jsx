@@ -2,7 +2,9 @@ import React from 'react';
 
 const page = () => {
     return (
-        <div className='grid grid-cols-3 items-center w-full border border-black py-2 space-x-2'>
+       <div>
+         
+         <div className='grid grid-cols-3 items-center w-full border border-black py-2 space-x-2'>
             {/* first div */}
             <div className="min-h-[100%] bg-white"><img src="/images/TV.jpg" alt="" className='h-[70vh] overflow-hidden object-cover mt-0'/></div>
 
@@ -71,6 +73,33 @@ const page = () => {
                     </div>
             </div>
         </div>
+
+        <div className=" mt-12 bg-white px-24">
+            <h1 className="text-3xl font-bold py-5">OnePlus Nord CE 4 Lite 5G 8GB/256GB Specifications</h1>
+            <ul className=" py-4 space-y-4">
+                <li className="list-disc">OS: OxygenOS 14 with Trinity Engine based on Android™ 14</li>
+                <li className="list-disc">Chipset: Qualcomm® Snapdragon™ 695 5G (6nm)</li>
+                <li className="list-disc">GPU: Adreno™ 619</li>
+                <li className="list-disc">RAM: 8GB LPDDR4X (Expandable up to 16GB)</li>
+                <li className="list-disc">ROM: 256GB UFS 2.2</li>
+                <li className="list-disc">Network: 3G/4G/5G</li>
+                <li className="list-disc">Sim Slot: Hybrid Dual Nano Sim (SIM & SIM/microSD)</li>
+                <li className="list-disc">Display Type: 6.67" FHD+ AMOLED Display with 120Hz Refresh Rate | Supports Amazon Prime Video HD, Netflix HD</li>
+                <li className="list-disc">Display Features: 2400x1080 Pixels | 20:09 Aspect Ratio | 394 PPI | 92.2% Screen-to-body Ratio</li>
+                <li className="list-disc">Rear Camera: 50MP Wide Camera with OIS + 2MP Depth Camera | 1-10X Zoom | Two rear LED flash lights</li>
+                <li className="list-disc">Mechanism: Sony LYT-600 Sensor, 1/1.95" sensor size, f/1.8 aperture, 5P lens; PDAF autofocus (50MP) + F/2.4 aperture, (2MP Depth)</li>
+                <li className="list-disc">Front Camera: 16MP, F/2.4 aperture with fixed focus</li>
+                <li className="list-disc">Video (Front | Rear): 1080p video at 30 fps | 720p video at 30 fps | Video editor</li>
+                <li className="list-disc">Front Photography Modes: Face Unlock | Screen Flash | Nightscape | Portrait mode | Pano | Time-lapse | Retouching | Filters</li>
+                <li className="list-disc">Audio: Dual Stereo Speakers | 3.5mm headphone jack | 300% Ultra Volume Mode</li>
+                <li className="list-disc">Security: In-display Fingerprint Sensor | Facial Recognition</li>
+                <li className="list-disc">Connectivity: Support Wi-Fi 5(802.11ac), 802.11a/b/g/n/ | Bluetooth® 5.1 | GPS | NFC</li>
+                <li className="list-disc">Battery: 5500 mAh (non-removable) | 80W SUPERVOOC Fast Charging | 5W Reverse Charging | Type-C Charging</li>
+                <li className="list-disc">Sensors: Gyroscope | Accelerometer | Proximity Sensor| Geomagnetic Sensor | Gravity Sensor | Pedometer</li>
+            </ul>
+        </div>
+
+       </div>
     );
 };
 
