@@ -4,9 +4,19 @@ const page = () => {
     return (
        <div>
          
-         <div className='grid grid-cols-3 items-center w-full border border-black py-2 space-x-2'>
+         <div className='grid grid-cols-1 lg:grid-cols-3 items-center w-full py-2 lg:space-x-2'>
             {/* first div */}
-            <div className="min-h-[100%] bg-white"><img src="/images/TV.jpg" alt="" className='h-[70vh] overflow-hidden object-cover mt-0'/></div>
+            <div className="min-h-[100%] bg-white">
+                <img src="/images/TV.jpg" alt="" className='h-[70vh] overflow-hidden object-cover mt-0'/>
+                <div className='flex items-center justify-center lg:justify-end gap-x-4 py-4 '>
+                    <button className="inline-flex items-center justify-center px-8 py-4 font-sans font-semibold tracking-wide border border-primary text-primary hover:text-white hover:bg-blue-500 rounded-lg h-[60px]">
+                        ADD TO CART
+                    </button>
+                    <button className="inline-flex items-center justify-center px-8 py-4 font-sans font-semibold tracking-wide text-white bg-secondary hover:text-secondary border hover:border-secondary hover:bg-white hover:font-bold rounded-lg h-[60px]">
+                        BUY NOW
+                    </button>
+                </div>
+            </div>
 
             {/* second div */}
             <div className=" h-full bg-white p-4 border border-slate-300">
@@ -56,7 +66,7 @@ const page = () => {
                 {/* first ads */}
                     <div className="py-4 border-b border-slate-300 ">
                         <h1 className="font-bold text-xl">Frequently brought together</h1>
-                        <div className="flex items-center space-x-6 p-4">
+                        <div className="flex items-center lg:space-x-6 lg:p-4">
                             <img src="/images/TV.jpg" alt="" className='w-16'/>
                             <p className="">GOVO GoKixx 621 ENC Bluetooth Wireless</p>
                             <button className='bg-blue-600 text-white py-1 px-2 rounded-xl'>Add</button>
@@ -74,7 +84,7 @@ const page = () => {
             </div>
         </div>
 
-        <div className=" mt-12 bg-white px-24">
+        <div className=" mt-12 bg-white px-12 lg:px-24">
             <h1 className="text-3xl font-bold py-5">OnePlus Nord CE 4 Lite 5G 8GB/256GB Specifications</h1>
             <ul className=" py-4 space-y-4">
                 <li className="list-disc">OS: OxygenOS 14 with Trinity Engine based on Android™ 14</li>
