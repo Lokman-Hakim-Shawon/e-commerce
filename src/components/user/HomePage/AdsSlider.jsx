@@ -10,7 +10,7 @@ const AdsSlider = () => {
         {img:'/images/ads6.png',title:"Casio Leather Belt Men's Watch",price:'TK. 3,920'},
     ]
     return (
-        <div className='flex justify-between items-center bg-white lg:py-2 my-4 lg:px-24 lg:space-x-4 overflow-scroll w-[100%]'>
+        <div className='flex justify-between items-center bg-white lg:py-2 my-4 lg:px-24 lg:space-x-4 overflow-scroll w-[100%] z-10'>
             {
                 adsData.map((data,index)=><div key={index} className="flex justify-between items-center space-x-2 border-r border-slate-300 lg:p-6 text-xs text-gray-600 lg:font-bold pr-24 lg:pr-30 ">
                 <img src={data.img} alt="" className='lg:w-20 object-cover'/>

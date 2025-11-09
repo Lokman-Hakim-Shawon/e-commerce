@@ -1,8 +1,22 @@
+'use client'
 import Link from 'next/link';
-import React from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 import { MdMenu } from "react-icons/md";
+import HomeSideBar from './HomePage/HomeSideBar';
+import { useEffect, useState } from 'react';
 const Navbar = () => {
+    const [isActive,setIsActive]=useState(false)
+    const menuOpenClose=()=>{
+        setIsActive(!isActive)
+    }
+    useEffect(()=>{
+        if(isActive){
+            document.body.style.overflow='hidden'
+        }
+        else{
+            document.body.style.overflow='auto'
+        }
+    },[isActive])
     return (
         <div className="">
             {/* ads section  */}
@@ -10,7 +24,9 @@ const Navbar = () => {
 
             {/* menu and logo section  */}
             <div className='flex justify-between items-center px-8 lg:px-16 py-2 lg:py-4 bg-primary text-white'>
-            <MdMenu  className='text-4xl font-bold'/>
+            <div className="">
+            <MdMenu onClick={()=>menuOpenClose(true)} className='text-4xl font-bold'/>
+            </div>
             <h1 className=" font-bold text-xl lg:text-4xl">Pickaboo</h1>
             <div>
                 <input
@@ -44,6 +60,9 @@ const Navbar = () => {
                     placeholder="Search"
                     className=" w-[300px] border border-slate-200 rounded-lg py-2 px-5 outline-none	bg-transparent bg-white"
                 />
+            </div>
+            <div className='lg:hidden'>
+            <HomeSideBar isActive={isActive} menuOpenClose={menuOpenClose}/>
             </div>
         </div>
     );
