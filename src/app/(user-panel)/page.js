@@ -3,6 +3,8 @@ import BannerSection from '@/components/user/HomePage/BannerSection';
 import HomeSideBar from './../../components/user/HomePage/HomeSideBar';
 import AdsSlider from '@/components/user/HomePage/AdsSlider';
 import Product_Section from '@/components/user/HomePage/Product_Section';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function Home() {
   const heading1='Best Deals of Electronics'
@@ -11,13 +13,13 @@ export default function Home() {
   const heading4='Best Television'
   const heading5='SmartPhone Hub'
   const heading6='Best AC Deals'
-  const cardData=[
-    {id:'1', img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
-    {id:'2', img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
-    {id:'3', img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
-    {id:'4', img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
-    {id:'5', img:'/images/TV.jpg',title:'Google Television',desc:'Haier 43 Inch FHD Bezel-Less google TV.',price:'40,900'},
-  ]
+
+  const [cardData,setCardData]=useState([])
+  useEffect(()=>{
+    axios.get('https://e-commerce-backend-wheat-zeta.vercel.app/api/product')
+    .then(res=>setCardData(res.data))
+    .catch(error=>console.log(error.message))
+  },[])
   return (
     <main className="w-full h-full ">
       <div className='lg:flex lg:justify-between bg-white h-[40vh] lg:h-[60vh]'>

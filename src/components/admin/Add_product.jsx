@@ -75,8 +75,8 @@ const Add_product = () => {
                     {/* product description */}
                     <div className=" space-y-2 ">
                     <p className="">Product Description</p>
-                    <input
-                        type="text" id="id" name="description" placeholder="Type Product Description"
+                    <textarea
+                        rows={4} id="id" name="description" placeholder="Type Product Description"
                         className="w-[300px] border border-slate-200 rounded-lg py-3 px-5 outline-none	bg-transparent"
                     />
                     </div>
@@ -100,7 +100,7 @@ const Add_product = () => {
 
                     {/* product image*/}
                     <div className=" space-y-2 ">
-                    <p className="">Product Description</p>
+                    <p className="">Product image</p>
                     <input
                         type="file" id="id" name="image"
                         className="w-[300px] border border-slate-200 rounded-lg py-3 px-5 outline-none	bg-transparent"
